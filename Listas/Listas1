@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Listas
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> lista = new List<string>();
+            lista = lista.OrderBy(o => o).ToList();
+            lista.Add("Carlos");
+            lista.Add("Ana");
+            lista.Add("Luis");
+            lista.Add("Juan");
+            lista.Add("Oscar");
+            Console.WriteLine("El elemento en la pocision 2 es: " + lista[1]);
+            Console.WriteLine("La cantidad de elemtos es :" + lista.Count);
+            Console.WriteLine("En el caso de Ana, Ella se encuentra \nen el indice :" + lista.IndexOf("Ana"));
+            Console.WriteLine("Que nombre desea Buscar?");
+            string name = Console.ReadLine();
+            bool res = lista.Contains(name);//muestra cuantos elementos hay 
+            if (res == true)
+            {
+                Console.WriteLine("El elemento se encuentra en la lista");
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("El elemento no se encuentra en la lista");
+                Console.WriteLine("Desea agregarlo");
+                string opc = Console.ReadLine();
+                opc = opc.ToLower();
+                if (opc == "si")
+                {
+                    lista.Add(name);
+                    Console.WriteLine("Se a agregado a la lista");
+                    lista.ForEach(Print);
+                }
+                else
+                {
+                    Console.WriteLine("Gracias");
+                    lista.ForEach(Print);
+                }
+                       
+            }
+            void Print(string s)
+            {
+                Console.WriteLine(s);
+            }
+            Console.ReadKey();
+        }
+    }
+}
