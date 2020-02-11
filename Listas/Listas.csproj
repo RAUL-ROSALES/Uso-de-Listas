@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA299AE6-4149-47C6-842D-C7A934523B8C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Listas</RootNamespace>
+    <AssemblyName>Listas</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Apollo13, Version=3.4.17344.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Apollo13.3.4.17344\lib\net45\Apollo13.dll</HintPath>
+    </Reference>
+    <Reference Include="Apollo13.DataAccessLayer, Version=3.4.18001.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Apollo13.DataAccessLayer.3.4.18001\lib\net45\Apollo13.DataAccessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Apollo13.Mapper, Version=3.4.17344.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Apollo13.Mapper.3.4.17344\lib\net45\Apollo13.Mapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Apollo13.PerformanceMonitor, Version=3.4.18001.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Apollo13.PerformanceMonitor.3.4.18001.2\lib\net45\Apollo13.PerformanceMonitor.dll</HintPath>
+    </Reference>
+    <Reference Include="Apollo13.Threadworker, Version=3.4.18001.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Apollo13.Threadworker.3.4.18001.2\lib\net45\Apollo13.Threadworker.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="QPick.Classlogger, Version=3.4.17343.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QPick.Classlogger.3.4.17343\lib\net45\QPick.Classlogger.dll</HintPath>
+    </Reference>
+    <Reference Include="Qpick.Enums, Version=3.4.18037.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Qpick.Enums.3.4.18037.1\lib\net45\Qpick.Enums.dll</HintPath>
+    </Reference>
+    <Reference Include="QPick.Methodlogger, Version=3.3.17164.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QPick.Methodlogger.3.3.17164.0\lib\net45\QPick.Methodlogger.dll</HintPath>
+    </Reference>
+    <Reference Include="QPick.StocklocationMask, Version=3.3.17170.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QPick.StocklocationMask.3.3.17170.0\lib\net45\QPick.StocklocationMask.dll</HintPath>
+    </Reference>
+    <Reference Include="QPick.XML, Version=3.3.17170.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QPick.XML.3.3.17170.0\lib\net45\QPick.XML.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickPick.One, Version=3.4.18143.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QuickPick.One.3.4.18143.6\lib\net45\QuickPick.One.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickPickOneCLR, Version=3.4.18037.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QuickPickOneCLR.3.4.18037.2\lib\net45\QuickPickOneCLR.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Dataflow, Version=4.5.24.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Tpl.Dataflow.4.5.24\lib\portable-net45+win8+wpa81\System.Threading.Tasks.Dataflow.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Database.dacpac">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="master.dacpac">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="msdb.dacpac">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sql\2012\Microsoft.Data.Tools.Schema.Sql.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Sql\2012\Microsoft.Data.Tools.Utilities.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Sql\2012\Microsoft.SqlServer.Dac.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Sql\2014\Microsoft.Data.Tools.Schema.Sql.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Sql\2014\Microsoft.Data.Tools.Utilities.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Sql\2014\Microsoft.SqlServer.Dac.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Sql\2016\Microsoft.Data.Tools.Schema.Sql.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Sql\2016\Microsoft.Data.Tools.Utilities.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Sql\2016\Microsoft.SqlServer.Dac.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NuGet.exe" />
+    <Content Include="nuget.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
